@@ -1,3 +1,4 @@
+test_db.Artists
 SELECT Artists.ArtistName,
 COUNT(Streams.StreamID) AS TotalStreams
 FROM Artists
