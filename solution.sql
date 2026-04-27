@@ -1,12 +1,11 @@
 -- Write your SQL query below:
 SELECT
-    Artists.ArtistName,
-    Payments.PeriodStart,
-    Payments.PeriodEnd,
-    Payments.AmountPaid,
-    Payments.PaymentDate
+    Songs.SongTitle,
+    Count(Streams.StreamID) AS TotalStreams
 FROM
-    Artists
-    INNER JOIN Payments ON Artists.ArtistID = Payments.ArtistID
+    Songs
+    INNER JOIN Streams ON Songs.SongID = Streams.SongID
+GROUP BY
+    Songs.SongTitle
 ORDER BY
-    Payments.AmountPaid DESC;
+    Count(Streams.StreamID) DESC;
