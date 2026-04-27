@@ -1,3 +1,4 @@
+-- Write your SQL query below:
 SELECT
     Artists.ArtistName,
     Payments.PeriodStart,
@@ -8,4 +9,4 @@ FROM
     Artists
     INNER JOIN Payments ON Artists.ArtistID = Payments.ArtistID
 ORDER BY
-    Payments.AmountPaid DESC;-- Write your SQL query below:
+    Payments.AmountPaid DESC;
